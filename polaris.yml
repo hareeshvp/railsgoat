@@ -1,7 +1,8 @@
 version: "1"
 project:
   name: HVP-railsgoat
-  branch: ${scm.git.branch}
+  branch: development
+  #  branch: ${scm.git.branch}
   revision:
     name: ${scm.git.commit}
     date: ${scm.git.commit.date}
