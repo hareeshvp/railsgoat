@@ -1,0 +1,19 @@
+version: "1"
+project:
+  name: HVP-railsgoat
+  branch: ${scm.git.branch}
+  revision:
+    name: ${scm.git.commit}
+    date: ${scm.git.commit.date}
+capture:
+  fileSystem:
+    ruby:
+      files:
+      - directory: ${project.projectDir}
+analyze:
+  mode: central
+  coverity:
+    cov-analyze: ["--all", "--webapp-security"]
+install:
+  coverity:
+    version: default
